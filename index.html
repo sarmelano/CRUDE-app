@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/common.css">
+</head>
+<body>
+  <div id="modal" style="display: none;">
+    <div>
+      Delete user ?
+      <button id="confirm-delete">Delete</button>
+      <button id="cancel-delete">Cancel</button>
+    </div>
+  </div>
+  
+  <!--  элементы списка пользователей -->
+  <div id="user-list"></div>
+  
+  <!--  форма пользователя -->
+  <div id="user-form" style="display: none;">
+    <input id="user-name" type="text" placeholder="Name">
+    <span id="error-message-name" class="err"></span>
+    <input id="user-password" type="password" placeholder="Password">
+    <span id="error-message-password" class="err"></span>
+    <input id="user-age" type="number" placeholder="Age">
+    <span id="error-message-age" class="err"></span>
+    <input id="user-email" type="email" placeholder="Email">
+    <span id="error-message-email" class="err"></span>
+    <input id="user-phone" type="text" placeholder="Phone Number">
+    <span id="error-message-phone" class="err"></span>
+    <input id="user-card" type="text" placeholder="Card Number">
+    <span id="error-message-card" class="err"></span>
+    <button id="save-button">Save</button>
+  </div>
+  
+  <!--  кнопка добавления -->
+  <button id="add-button">Add new user</button>
+  
+  <!--  блок просмотра пользователя -->
+  <div id="user-view"></div>
+
+  <script src="scripts/data.js"></script>
+  <script src="scripts/func.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
