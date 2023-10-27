@@ -46,6 +46,11 @@ document.getElementById('user-list').addEventListener('click', event => {
 });
 
 document.getElementById('add-button').addEventListener('click', () => {
+  const userForm = document.getElementById('user-form');
+  if (userForm.style.display === 'block') {  //блокируем создание нового user если форма уже открыта пользователем
+    return;
+  }
+
   const id = Math.max(...users.map(user => user.id), 0) + 1;
   currentUser = { id, name: '', age: '', password: '', email: '', phone: '', card: '' };
   users.push(currentUser);
